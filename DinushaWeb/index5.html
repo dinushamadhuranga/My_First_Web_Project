@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinusha Madhuranga</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="assests/css/allcss.css">
+    <link rel="stylesheet" href="assests/css/normalize.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Muli">
+    <link href='https://fonts.googleapis.com/css?family=Ek Mukta' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Iceberg' rel='stylesheet'>
+
+    <style>
+/*        !*======================Basic codes===================*!
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,
+        body{
+            background-color: #fff;
+            color: #555;
+            font-family: Muli;
+            font-weight: 300;
+            font-size: 20px;
+            text-rendering: optimizeLegibility;
+            overflow-x: hidden;
+        }
+
+        !*===========================Common codes========================================*!
+
+        h1{
+            margin: 0;
+        }
+
+        !*=============HEADER===============*!
+
+        body>header{
+            position: relative;
+            background-image: url("assests/images/Interfaces2.jpg");
+            background-size: cover;
+            height: 140vh;
+            width: 100%;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body>header>nav:nth-child(1)>div>h1{
+            font-family: Muli;
+            color: #FDD911;
+            font-weight: 800;
+            font-size: 40px;
+            padding: 15px;
+            float: left;
+        }
+        body>header>nav:nth-child(1)>div>h1>span{
+            color: white;
+        }
+        body>header>nav:nth-child(1)>div>ul{
+            list-style: none;
+            float: right;
+        }
+        body>header>nav:nth-child(1)>div>ul>li{
+            display: inline-block;
+            margin-right: 30px;
+            margin-top: 30px;
+        }
+        body>header>nav:nth-child(1)>div>ul>li>a:link,
+        body>header>nav:nth-child(1)>div>ul>li>a:visited{
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 90%;
+            padding-bottom: 10px;
+            border-bottom: 2px transparent;
+            transition: border-bottom 0.3s , font-weight 0.3s;
+        }
+        body>header>nav:nth-child(1)>div>ul>li>a:hover,
+        body>header>nav:nth-child(1)>div>ul>li>a:active{
+            border-bottom: 2px solid #FDD911;
+            font-weight: 800;
+        }
+
+        body>header>div:nth-child(2){
+            position: absolute;
+            width: 1140px;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+        body>header>div:nth-child(2)>h1{
+            font-family: Muli;
+            color: white;
+            text-align: center;
+            font-weight: 800;
+            font-size: 60px;
+        }
+        body>header>div:nth-child(2)>h2{
+            line-height: 40px;
+            font-size: 20px;
+            color: #FDD911;
+            font-family: Muli;
+            text-align: center;
+            font-weight: 800;
+        }
+        body>header>div:nth-child(2)>a:link,
+        body>header>div:nth-child(2)>a:visited{
+            display: inline-block;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+            border: 1px solid #FDD911;
+            transition: background-color 0.4s , border 0.4s , color 0.4s;
+            margin: 10px 0 0 0;
+            position: absolute;
+            font-weight: 800;
+            left: 50%;
+            !*-ms-transform: translate(-50%, -50%);*!
+            transform: translate(-50%, 0%);
+        }
+        body>header>div:nth-child(2)>a:hover,
+        body>header>div:nth-child(2)>a:active{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        body>header>section{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 400PX;
+            !*background: white;*!
+        }
+        body>header>section>div:nth-child(1) {
+            position: absolute;
+            bottom: 0;
+            -webkit-clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
+            clip-path: polygon(0 0, 100% 19%, 86% 100%, 0% 100%);
+            !*width: 400px;*!
+            width: 42%;
+            height: 400px;
+            background: #FDD911;
+            z-index: 10;
+        }
+        body>header>section>div:nth-child(2){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-clip-path: polygon(0 0, 100% 17%, 100% 65%, -35% 100%);
+            clip-path: polygon(0 0, 100% 0%, 91% 81%, 0% 100%);
+            transform: rotate(180deg);
+            !*width: 400px;*!
+            width: 64%;
+            height: 400px;
+            background: white;
+            z-index: 1;
+        }
+        body>header>section>img{
+            position: absolute;
+            z-index: 30;
+            bottom: 0;
+            left: 20%;
+            height: 320px;
+        }
+        body>header>section>div:nth-child(4){
+            left: 50%;
+            bottom: 0;
+            position: absolute;
+            height: 300px;
+            width: 50%;
+            !*background: black;*!
+            z-index: 11;
+        }
+        body>header>section>div:nth-child(4)>h1:nth-child(1){
+            padding-bottom: 10px;
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        body>header>section>div:nth-child(4)>h2{
+            margin: auto;
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        body>header>section>div:nth-child(4)>p{
+            margin-top: 40px;
+            font-family: Muli;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+        }
+
+
+        !*=============MAIN===============*!
+
+
+        body>main>section:nth-child(1){
+            position: relative;
+            padding-top: 100px;
+            width: 100%;
+            height: 750px;
+
+        }
+        body>main>section:nth-child(1)>div:nth-child(1){
+            !*margin: 100px 0 100px 0;*!
+            margin: 0 0 90px 0;
+            !*width: 500px;*!
+            !*background-color: black;*!
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(1)>div:nth-child(1)>h1{
+            color: black;
+            padding: 2px 0 2px 10px;
+            text-align: center;
+            font-size: 70px;
+
+        }
+        body>main>section:nth-child(1)>div:nth-child(1)>h1>span{
+            color: #FDD911;
+        }
+        body>main>section:nth-child(1)>ul{
+            list-style: none;
+            width: 90%;
+            !*left: 0;*!
+            !*right: 0;*!
+            margin: auto;
+        }
+        body>main>section:nth-child(1)>ul>li{
+            display: block;
+            float: left;
+            width: 25%
+        }
+        body>main>section:nth-child(1)>ul>li>figure{
+            width: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        body>main>section:nth-child(1)>ul>li>figure>img{
+            opacity: 0.8;
+            width: 100%;
+            height: auto;
+            transform: scale(1.25);
+            transition: transform 0.5s ,opacity 0.5s;
+        }
+        body>main>section:nth-child(1)>ul>li>figure>img:hover{
+            transform: scale(1.03);
+            opacity: 1;
+        }
+
+        !*==============================================================*!
+
+        body>main>section:nth-child(2){
+            background-image: url("assests/images/laptop3.jpeg");
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            padding-top: 100px;
+            width: 100%;
+            !*height: 800px;*!
+        }
+        body>main>section:nth-child(2)>div:nth-child(1){
+            !*margin: 100px 0 100px 0;*!
+            margin: 0 0 90px 0;
+            !*width: 500px;*!
+            !*background-color: black;*!
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(2)>div:nth-child(1)>h1{
+            color: black;
+            padding: 2px 0 2px 10px;
+            text-align: center;
+            font-size: 70px;
+
+        }
+        body>main>section:nth-child(2)>div:nth-child(1)>h1>span{
+            color: #FDD911;
+        }
+
+        body>main>section:nth-child(2)>div:nth-child(2){
+            !*margin-top: 100px;*!
+            !*height: 450px;*!
+            !*background-color: white;*!
+            display: flex;
+            max-width: 1140px;
+            margin: 70px auto;
+
+            !*width: max-content;*!
+            !*align-items: center;*!
+            !*width: 80%;*!
+            !*margin: 0 10% 0 10%;*!
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div{
+            width: 32.26%;
+            background-color: white;
+            margin: 1% 0 1% 1.6%;
+            border-radius: 5px;
+            box-shadow: 0 2px 2px #efefef;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div{
+            border-bottom: 1px solid #e8e8e8;
+            padding: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(1){
+            background-color: #fcfcfc;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(1)>figure{
+            text-align: center;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(1)>figure>img{
+
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(1)>figure>h1{
+            font-weight: 400;
+            font-size: 60px;
+            color: #fdd911;
+            !*color: #141412;*!
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(2)>p{
+            text-align: center;
+            padding: 30px 53px;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(2)>ul{
+            text-align: center;
+            list-style: none;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(2)>ul>li{
+            padding: 4px 0;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(3){
+            padding: 30px 0;
+            text-align: center;
+            border: 0;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(3)>a:link,
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(3)>a:visited{
+            padding: 10px 60px;
+            text-decoration: none;
+            border-radius: 50px;
+            background-color: #f3b974;
+            color: white;
+            !*border: 1px solid black;*!
+            transition: background-color 0.4s , border 0.4s , color 0.4s ,padding 0.4s;
+            margin: 10px 0 0 0;
+            font-weight: 800;
+            transform: translate(-50%, 0%);
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(3)>a:hover,
+        body>main>section:nth-child(2)>div:nth-child(2)>div>div:nth-child(3)>a:active{
+            background-color: #f6911c;;
+            border: 1px solid gray;
+            color: black;
+            border: 2px solid #FDD911;
+            padding: 12px 62px;
+            font-weight: 800;
+        }
+
+
+        !*==============================================================*!
+
+        body>main>section:nth-child(3){
+            !*background-image: url("assests/images/laptop2.jpeg");*!
+            background-size: cover;
+            !*background-color: #f8f8f8;*!
+            position: relative;
+            padding-top: 100px;
+            width: 100%;
+            height: 800px;
+        }
+        body>main>section:nth-child(3)>div:nth-child(1){
+            !*margin: 100px 0 100px 0;*!
+            margin: 0 0 90px 0;
+            !*width: 500px;*!
+            !*background-color: black;*!
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(3)>div:nth-child(1)>h1{
+            color: black;
+            padding: 2px 0 2px 10px;
+            text-align: center;
+            font-size: 70px;
+
+        }
+        body>main>section:nth-child(3)>div:nth-child(1)>h1>span{
+            color: #FDD911;
+        }
+
+        !*=============FOOTER===============*!
+
+        body>footer{
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+        body>footer>div:nth-child(1){
+            position: absolute;
+            bottom: 0;
+            -webkit-clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
+            clip-path: polygon(0 0, 100% 19%, 86% 100%, 0% 100%);
+            !* width: 400px; *!
+            width: 50%;
+            height: 400px;
+            background: #FDD911;
+            z-index: 10;
+            float: left;
+        }
+        body>footer>div:nth-child(1)>h1{
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 50px;
+            margin: auto;
+            top: 15%;
+            position: absolute;
+            padding: 10px
+        }
+        body>footer>div:nth-child(1)>ul{
+            position: absolute;
+            margin: auto;
+            top :40%;
+            list-style: none;
+        ;
+
+        }
+        body>footer>div:nth-child(1)>ul>li{
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            font-family: 'Muli', cursive;
+            cursor: pointer;
+        }
+        body>footer>div:nth-child(2){
+            width: 50%;
+            height: 400px;
+            !*position: absolute;*!
+            right: 0;
+            float: right;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(1){
+            padding-left: 20%;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(1)>h1{
+            margin: 1vw 0 10px 0;
+            font-size: 30px;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(1)>nav>ul>li{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(1)>nav>ul>li>a>img{
+            height: 60px;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(2){
+            padding-left: 20%;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(2)>h1{
+            font-size: 20px;
+            color: #141412;
+            padding: 10px 0;
+        }
+        body>footer>div:nth-child(2)>div:nth-child(2)>form>div>div:nth-child(1){
+            margin: 10px 0;
+            width: 32.26%;
+            float: left;
+        }
+
+        body>footer>div:nth-child(2)>div:nth-child(2)>form>div>div:nth-child(2){
+            margin: 10px 0;
+            width: 66.13%;
+            float: right;
+        }
+
+
+
+        @media all and (max-width: 1300px) {
+            body>header{
+                !*display: none;*!
+            }
+        }
+        @media all and (max-width: 1023px) {
+            body>main>section:nth-child(1){
+                height: 640px;
+            }
+            body>main>section:nth-child(2){
+                padding-top: 60px;
+            }
+        }
+        @media all and (max-width: 767px) {
+            body>main>section:nth-child(2)>div:nth-child(2){
+                flex-direction: column;
+                align-items: center;
+            }
+            body>main>section:nth-child(2)>div:nth-child(2)>div{
+                width: 60%;
+            }
+        }
+        @media all and (max-width: 480px) {
+
+        }*/
+
+
+    </style>
+
+</head>
+<body>
+
+<header id="aboutme">
+    <nav class="h">
+        <div class="row">
+            <h1 class="headertopic">Software <span>Engineer</span></h1>
+            <ul class="main-nav js--main-nav">
+<!--                <li><a href="#">Home</a></li>-->
+                <li><a href="#aboutme">about me</a></li>
+                <li><a href="#whatido">what i do</a></li>
+                <li><a href="#recentdevolopment">recent developments</a></li>
+                <li><a href="#ongoingworks">ongoing work</a></li>
+                <li><a href="#contactme">contact me</a></li>
+            </ul>
+            <a class="mobilemenuicon js--nav-icon"><img src=assests/images/menu1.png alt="menuicon"></a>
+        </div>
+    </nav>
+
+    <div>
+        <h1>CODER</h1>
+        <h2>Codes Simplify the world</h2>
+        <a class="btn btn-cv" href="href=assests/documents/dinusha_madhurnga_cv.docx" download>get CV</a>
+    </div>
+
+    <section>
+        <div></div>
+        <div></div>
+        <img src="assests/images/Edit6.png">
+        <div>
+            <h1>I'm Dinusha Madhuranga</h1>
+            <h2>Software Engineer</h2>
+            <h2>Web devoloper and Web designer</h2>
+            <p>Im currently studying at ijse as a undergraduate.<br>And  im
+                21 years old now. And also studied mathematics<br> for my
+                a/l’s and im following a computer science part time
+                degree. <br>And also im interested in <strong>JAVA, PYTHON ,
+                    JAVA SCRIPT ,</strong> and <strong> C++ .</strong></p>
+        </div>
+    </section>
+
+</header>
+
+<main>
+
+    <section class="section-recentdevelopment js--section-recentdevolopment" id="recentdevolopment">
+        <div class="divbox">
+            <h1>
+                Recent <span>Development</span>
+            </h1>
+        </div>
+        <ul>
+            <li>
+                <figure>
+                    <img src="assests/images/python.jpg" alt="latest python works">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assests/images/java.jpg" alt="latest java works">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assests/images/htmlandcss.jpg" alt="web development course for beginners">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assests/images/python.jpg" alt="POS system by using boostrap framework">
+                </figure>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <figure>
+                    <img src="assests/images/image1.png" alt="image1">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assests/images/game1.jpg" alt="colombo night race 2">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assests/images/responsive.jpg" alt="web assignment">
+                </figure>
+            </li>
+            <li>
+                <figure>
+                    <img src="assests/images/image2.jpg" alt="image2">
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="ongoingworks" id="ongoingworks">
+        <div class="divbox">
+            <h1>
+                Ongoing <span>work</span>
+            </h1>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <figure>
+                        <img src="assests/images/projects.png" alt="projects">
+                        <h1>Projects</h1>
+                    </figure>
+                </div>
+                <div>
+                    <p>You can see all the
+                        projects i have done so
+                        far in javaScript ,  java ,
+                        python , html and css3
+                        languages .......</p>
+                </div>
+                <div>
+                    <a href="Projects.html" target="_blank">Show all</a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <figure>
+                        <img src="assests/images/assignments.png" alt="assignments">
+                        <h1>Assignments</h1>
+                    </figure>
+                </div>
+                <div>
+                    <p>this one is  reserved for view
+                        my completed assignments
+                        which is given by IJSE during
+                        undergraduate .</p>
+                </div>
+                <div>
+                    <a href="Assignments.html" target="_blank">Show all</a>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <figure>
+                        <img src="assests/images/games.png" alt="games">
+                        <h1>Games</h1>
+                    </figure>
+                </div>
+                <div>
+                    <p>This is the most insteresting
+                        part . You can click here and
+                        watch and play the games
+                        i made using java script.</p>
+                </div>
+                <div>
+                    <a href="Games.html" target="_blank">Show all</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="whatido">
+        <div class="divbox">
+            <h1>
+                What I <span>Do</span>
+            </h1>
+        </div>
+    </section>
+
+</main>
+
+<footer id="contactme">
+
+    <div>
+        <h1>Contact Me</h1>
+        <ul>
+            <li>email : dinushamadhuranga111@gmail.com</li>
+            <li>write : no 206/1,Gemunu mw,Welmille,Bandaragama</li>
+            <li>mobile : 0711911333</li>
+            <li>tel : 0382293211</li>
+            <li>fax : 0382293211</li>
+        </ul>
+    </div>
+    
+    <div>
+        <div>
+            <h1>Let's meet with social media</h1>
+            <nav>
+                <ul>
+                    <li><a href="https://api.whatsapp.com/send?phone=94711911333" target="_blank"><img src="assests/images/whatsapp.png" alt=""></a></li>
+                    <li><a href="#"><img src="assests/images/instagram.png" alt=""></a></li>
+                    <li><a href="www.linkedin.com/in/dinusha-madhuranga-093a24166" target="_blank"><img src="assests/images/linkedin.png" alt=""></a></li>
+                    <li><a href="https://www.facebook.com/dinush.madhuranga" target="_blank"><img src="assests/images/facebook.png" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <h1>your comments are very valuable for me</h1>
+            <form method="post" action="#" class="contact-form">
+            <div>
+                <div>
+                    <label for="name">Name</label>
+                </div>
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Your name" required>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="email">Email</label>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label>Drop us a line</label>
+                </div>
+                <div>
+                    <textarea name="message" placeholder="Your message"></textarea>
+                </div>
+            </div>
+            <div>
+                <div>
+<!--                    <label>&nbsp;</label>-->
+                </div>
+                <div>
+                    <input type="submit" value="Send it!">
+                </div>
+            </div>
+
+        </form></div>
+    </div>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="//cdn.jsdelivr.net/selectivizr/1.0.3b/selectivizr.min.js"></script>
+<script src="assests/js/script.js"></script>
+<script src="assests/js/jquery.waypoints.min.js"></script>
+</body>
+</html>

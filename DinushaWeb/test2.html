@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test 2</title>
+    <style>
+
+    :root {
+        --body-text-color: #5c5957;
+        --body-bg-color: #e2d9d5;
+        --card-border-color: #e2d9d5;
+        --card-bg-color: #fff;
+        --dashed-color: #fafafa;
+        --red: #e31b23;
+        --offset-before: 8px;
+        --offset-after: 16px;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    hr {
+        border-color: var(--dashed-color);
+    }
+
+    body {
+        font-family: sans-serif;
+        color: var(--body-text-color);
+        background: var(--body-bg-color);
+        margin-top: 60px;
+    }
+
+
+    /* CARD STYLES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .card {
+        position: relative;
+        cursor: pointer;
+        max-width: 400px;
+        margin: 60px auto;
+    }
+
+    .card::before,
+    .card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card::before,
+    .card::after,
+    .card .card-inner {
+        background-color: var(--card-bg-color);
+        border: 1px solid var(--card-border-color);
+        border-radius: 5px;
+        transition: transform 0.3s;
+    }
+
+    .card::before,
+    .card-inner {
+        z-index: 1;
+    }
+
+    .card-inner {
+        position: relative;
+        padding: 3rem;
+    }
+
+
+    /*TOP LEFT*/
+    .card-top-left::before {
+        transform: translate(
+                calc(-1 * var(--offset-before)),
+                calc(-1 * var(--offset-before))
+        );
+    }
+
+    .card-top-left::after {
+        transform: translate(
+                calc(-1 * var(--offset-after)),
+                calc(-1 * var(--offset-after))
+        );
+    }
+
+    .card-top-left:hover::before,
+    .card-top-left:hover::after,
+    .card-top-left:hover .card-inner {
+        transform: translate(calc(-1 * var(--offset-before)), 0);
+    }
+
+
+    /*TOP RIGHT*/
+    .card-top-right::before {
+        transform: translate(var(--offset-before), calc(-1 * var(--offset-before)));
+    }
+
+    .card-top-right::after {
+        transform: translate(var(--offset-after), calc(-1 * var(--offset-after)));
+    }
+
+    .card-top-right:hover::before,
+    .card-top-right:hover::after,
+    .card-top-right:hover .card-inner {
+        transform: translate(var(--offset-before), 0);
+    }
+
+
+    /*BOTTOM LEFT*/
+    .card-bottom-left::before {
+        transform: translate(calc(-1 * var(--offset-before)), var(--offset-before));
+    }
+
+    .card-bottom-left::after {
+        transform: translate(calc(-1 * var(--offset-after)), var(--offset-after));
+    }
+
+    .card-bottom-left:hover::before,
+    .card-bottom-left:hover::after,
+    .card-bottom-left:hover .card-inner {
+        transform: translate(calc(-1 * var(--offset-before)), 0);
+    }
+
+
+    /*BOTTOM RIGHT*/
+    .card-bottom-right::before {
+        transform: translate(var(--offset-before), var(--offset-before));
+    }
+
+    .card-bottom-right::after {
+        transform: translate(var(--offset-after), var(--offset-after));
+    }
+
+    .card-bottom-right:hover::before,
+    .card-bottom-right:hover::after,
+    .card-bottom-right:hover .card-inner {
+        transform: translate(var(--offset-before), 0);
+    }
+
+
+    /*DIAGONAL FROM RIGHT*/
+    .card-diagonal-from-right::before {
+        transform: translate(var(--offset-before), calc(-1 * var(--offset-before)));
+    }
+
+    .card-diagonal-from-right::after {
+        transform: translate(var(--offset-after), calc(-1 * var(--offset-after)));
+    }
+
+    .card-diagonal-from-right:hover::before {
+        transform: translate(calc(-1 * var(--offset-before)), var(--offset-before));
+    }
+
+    .card-diagonal-from-right:hover::after {
+        transform: translate(calc(-1 * var(--offset-after)), var(--offset-after));
+    }
+
+
+    /*DIAGONAL FROM LEFT*/
+    .card-diagonal-from-left::before {
+        transform: translate(
+                calc(-1 * var(--offset-before)),
+                calc(-1 * var(--offset-before))
+        );
+    }
+
+    .card-diagonal-from-left::after {
+        transform: translate(
+                calc(-1 * var(--offset-after)),
+                calc(-1 * var(--offset-after))
+        );
+    }
+
+    .card-diagonal-from-left:hover::before {
+        transform: translate(var(--offset-before), var(--offset-before));
+    }
+
+    .card-diagonal-from-left:hover::after {
+        transform: translate(var(--offset-after), var(--offset-after));
+    }
+
+
+    /*ROTATE*/
+    .card-rotate::before {
+        transform: rotate(-10deg);
+    }
+
+    .card-rotate::after {
+        transform: rotate(10deg);
+    }
+
+    .card-rotate:hover::before,
+    .card-rotate:hover::after {
+        transform: none;
+    }
+
+
+    /*PERSPECTIVE*/
+    .card-perspective {
+        perspective: 700px;
+        /*You can change the origin if you want e.g. perspective-origin: top;*/
+    }
+
+    .card-perspective::before {
+        transform: rotateY(-15deg) translateX(16px);
+    }
+
+    .card-perspective::after {
+        transform: rotateY(-15deg) translateX(32px);
+    }
+
+    .card-perspective .card-inner {
+        transform: rotateY(-15deg);
+    }
+
+    .card-perspective:hover::before {
+        transform: rotateY(15deg) translateX(-16px);
+    }
+
+    .card-perspective:hover::after {
+        transform: rotateY(15deg) translateX(-32px);
+    }
+
+    .card-perspective:hover .card-inner {
+        transform: rotateY(15deg);
+    }
+
+
+    /*ORIGIN*/
+    .card-origin {
+        perspective: 1000px;
+        /*You can change the origin if you want e.g. perspective-origin: top;*/
+    }
+
+    .card-origin::before,
+    .card-origin::after,
+    .card-origin .card-inner {
+        transform-origin: top;
+    }
+
+    .card-origin::before {
+        transform: rotateX(37deg);
+    }
+
+    .card-origin::after {
+        transform: rotateX(18deg);
+    }
+
+    .card-origin .card-inner {
+        transform: rotateX(45deg);
+    }
+
+    .card-origin:hover .card-inner,
+    .card-origin:hover::before,
+    .card-origin:hover::after {
+        transform: none;
+    }
+
+
+    /* FOOTER
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    footer {
+        font-size: 1rem;
+        text-align: right;
+        padding: 10px;
+    }
+
+    footer span {
+        color: var(--red);
+    }
+
+
+
+    Resources1×0.5×0.25×Rerun
+    </style>
+</head>
+<body>
+HTML CSSResult
+EDIT ON
+<h1>Simple Stack Hover Effects</h1>
+
+<div class="card-wrapper">
+    <div class="card card-top-left">
+        <div class="card-inner">
+            <h3 class="card-title">Top Left</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-top-right">
+        <div class="card-inner">
+            <h3 class="card-title">Top Right</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-bottom-left">
+        <div class="card-inner">
+            <h3 class="card-title">Bottom Left</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-bottom-right">
+        <div class="card-inner">
+            <h3 class="card-title">Bottom Right</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-diagonal-from-right">
+        <div class="card-inner">
+            <h3 class="card-title">Diagonal From Right</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-diagonal-from-left">
+        <div class="card-inner">
+            <h3 class="card-title">Diagonal From Left</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-rotate">
+        <div class="card-inner">
+            <h3 class="card-title">Rotate</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-perspective">
+        <div class="card-inner">
+            <h3 class="card-title">Perspective</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="card card-origin">
+        <div class="card-inner">
+            <h3 class="card-title">Origin</h3>
+            <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class="container">
+            <small>Made with <span>❤</span> by <a href="http://georgemartsoukos.com/" target="_blank">George Martsoukos</a>
+            </small>
+        </div>
+    </footer>
+</body>
+</html>

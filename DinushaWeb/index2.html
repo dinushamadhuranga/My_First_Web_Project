@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinusha Madhuranga</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="assests/css/normalize.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Muli">
+    <link href='https://fonts.googleapis.com/css?family=Ek Mukta' rel='stylesheet'>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+        }
+
+        body>header{
+            position: relative;
+            width: 100%;
+            height: 60px;
+            z-index: -1;
+            background: black;
+        }
+        body>header>h1{
+            position: absolute;
+            /*width: 351px;*/
+            height: 50px;
+            left: 40px;
+            top: 8px;
+            font-family: Muli;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 35px;
+            line-height: 50px;
+            margin: auto;
+            letter-spacing: -0.015em;
+            color: #FDD911;
+        }
+        body>header>nav{
+            position: absolute;
+            right: 0;
+            top : 8px;
+
+        }
+        body > header > nav > ul {
+            margin-top: 0;
+            list-style: none;
+        }
+        body > header > nav > ul > li {
+                display: inline-block;
+                    padding: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: white;
+                    font-family: 'Muli', cursive;
+                    cursor: pointer;
+            }
+
+        body>main{
+            position: relative;
+        }
+
+        body>main>section:nth-child(1){
+            position: relative;
+            height: 1000px;
+            width: 100%;
+            z-index: -1;
+        }
+        body>main>section:nth-child(1)>img{
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+
+        }
+        body>main>section:nth-child(1)>div{
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            height: 600px;
+            width: 100%;
+        }
+        body>main>section:nth-child(1)>div>div{
+            position: absolute;
+            width: 300px;
+            height: 150px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        body>main>section:nth-child(1)>div>div>p:nth-child(1){
+            position: absolute;
+            left: 0;
+            right: 0;
+
+            font-size:  58px;
+            font-weight: bolder;
+            font-style: normal;
+            color: white;
+            font-family: 'Muli', cursive;
+            cursor: pointer;
+            z-index: 3;
+        }
+        body>main>section:nth-child(1)>div>div>p:nth-child(2){
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size:  17px;
+            margin: auto;
+            font-weight: bolder;
+            color: #FDD911;
+            font-family: 'Muli', cursive;
+            cursor: pointer;
+            z-index: 3;
+        }
+        body>main>section:nth-child(1)>section{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 300PX;
+            /*background: white;*/
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(1) {
+            position: absolute;
+            bottom: 0;
+            -webkit-clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
+            clip-path: polygon(0 0, 100% 19%, 86% 100%, 0% 100%);
+            /*width: 400px;*/
+            width: 42%;
+            height: 400px;
+            background: #FDD911;
+            z-index: 10;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(2){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            -webkit-clip-path: polygon(0 0, 100% 17%, 100% 65%, -35% 100%);
+            clip-path: polygon(0 0, 100% 0%, 91% 81%, 0% 100%);
+            transform: rotate(180deg);
+            /*width: 400px;*/
+            width: 64%;
+            height: 400px;
+            background: white;
+            z-index: 1;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(3){
+            left: 42%;
+            position: absolute;
+            height: 300px;
+            width: 50%;
+            z-index: 11;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(3)>ul{
+            list-style: none;
+            margin: auto;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(3)>ul:nth-child(1)>li:nth-child(1){
+            padding-bottom: 10px;
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 4vw;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(3)>ul:nth-child(1)>li:nth-child(2){
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.5vw;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(3)>ul:nth-child(1)>li:nth-child(3){
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.5vw;
+        }
+        body>main>section:nth-child(1)>section>div:nth-child(3)>ul:nth-child(1)>li:nth-child(4){
+            margin-top: 35px;
+            font-family: Muli;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.2vw;
+        }
+        body>main>section:nth-child(1)>section>img{
+            position: absolute;
+            z-index: 30;
+            bottom: 0;
+            left: 10vw;
+            height: 350px;
+        }
+
+        body>main>section:nth-child(2){
+            position: relative;
+            width: 100%;
+            height: 800px;
+            background: white;
+            z-index: -20;
+        }
+        body>main>section:nth-child(2)>img:nth-child(1){
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transform: rotate(180deg);
+            opacity: 0.5;
+            z-index: -10;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2){
+            position: absolute;
+            width: 40%;
+            height: 40px;
+            /*left: -1px;*/
+            top: 10%;
+            background: black;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>h2:nth-child(1){
+            position: absolute;
+            font-family: Muli;
+            font-style: normal;
+            padding-left: 40px;
+            margin: auto;
+            font-size: 30px;
+            letter-spacing: -0.015em;
+            color: #FDD911;
+        }
+        body>main>section:nth-child(2)>div:nth-child(2)>h2:nth-child(2){
+            position: absolute;
+            left :130px;
+            font-family: Muli;
+            font-style: normal;
+            padding-left: 20px;
+            margin: auto;
+            font-size: 30px;
+            letter-spacing: -0.015em;
+            color: white;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3){
+            top: 30%;
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            /*flex-wrap: nowrap;*/
+            /*flex-direction: row;*/
+            align-items: center;
+            justify-content: center;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)>div{
+            position: relative;
+            margin: 30px;
+            top: 10%;
+            width: 20vw;
+            height: 400px;
+            border-bottom-color: black;
+            background: white;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-right: 4px solid black;
+            border-left: 4px solid black;
+            border-top: 4px solid #FDD911;
+            border-bottom: 4px solid black;
+            text-align: center;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)>div>h1{
+            margin-top: 70px;
+            font-family: 'Ek Mukta';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 3.5vw;
+            line-height: 50px;
+            letter-spacing: -0.015em;
+            color: #141412;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)>div>p{
+            font-family: Muli;
+            font-style: normal;
+            font-size: 120%;
+            font-weight: normal;
+        }
+        body>main>section:nth-child(2)>section:nth-child(3)>div>img{
+
+            /*height: 100px;*/
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: -60px;
+
+        }
+
+        body>main>section:nth-child(3){
+            position: relative;
+            width: 100%;
+            height: 900px;
+            background: white;
+            z-index: -20;
+        }
+        body>main>section:nth-child(3)>img:nth-child(1){
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0.5;
+            z-index: -10;
+        }
+        body>main>section:nth-child(3)>div:nth-child(2){
+            position: absolute;
+            width: 40%;
+            height: 40px;
+            /*left: -1px;*/
+            top: 10%;
+            background: black;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3){
+            top: 30%;
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            /*flex-wrap: nowrap;*/
+            /*flex-direction: row;*/
+            align-items: center;
+            justify-content: center;
+        }
+        body>main>section:nth-child(3)>div:nth-child(2)>h2:nth-child(1){
+            position: absolute;
+            font-family: Muli;
+            font-style: normal;
+            padding-left: 40px;
+            margin: auto;
+            font-size: 30px;
+            letter-spacing: -0.015em;
+            color: #FDD911;
+        }
+        body>main>section:nth-child(3)>div:nth-child(2)>h2:nth-child(2){
+            position: absolute;
+            left :130px;
+            font-family: Muli;
+            font-style: normal;
+            padding-left: 20px;
+            margin: auto;
+            font-size: 30px;
+            letter-spacing: -0.015em;
+            color: white;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3)>div:nth-child(1){
+            height: 400px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: 20%;
+            background: white;
+            position: absolute;
+            /*top: 25%;*/
+            left: 10%;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3)>div:nth-child(2){
+            bottom: 0;
+            height: 500px;
+            top: 0;
+            margin: auto;
+            width: 30%;
+            background: white;
+            position: absolute;
+            /*top: 20%;*/
+            left: 0;
+            right: 0;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3)>div:nth-child(3){
+            height: 400px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: 20%;
+            background: white;
+            position: absolute;
+            /*top: 25%;*/
+            right: 10%;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3)>div:nth-child(4){
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-top: 74px solid transparent;
+            border-right: 30px solid black;
+            border-bottom: 74px solid transparent;
+            left: 4%;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3)>div:nth-child(5){
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-top: 74px solid transparent;
+            border-left: 30px solid black;
+            border-bottom: 74px solid transparent;
+            right: 4%;
+        }
+        body>main>section:nth-child(3)>section:nth-child(3)>div>img{
+            height: 100%;
+            width: 100%;
+        }
+
+        body>footer{
+            height: 400px;
+            width: 100%;
+            position: relative;
+        }
+        body>footer>div:nth-child(1){
+            position: absolute;
+            bottom: 0;
+            -webkit-clip-path: polygon(0 0, 100% 35%, 100% 65%, 0% 100%);
+            clip-path: polygon(0 0, 100% 19%, 86% 100%, 0% 100%);
+            /* width: 400px; */
+            width: 50%;
+            height: 400px;
+            background: #FDD911;
+            z-index: 10
+        }
+        body>footer>div:nth-child(1)>h1{
+            font-family: Muli;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 50px;
+            margin: auto;
+            top: 15%;
+            position: absolute;
+            padding: 10px
+        }
+        body>footer>div:nth-child(1)>ul{
+            position: absolute;
+            margin: auto;
+            top :40%;
+            list-style: none;
+            ;
+
+        }
+        body>footer>div:nth-child(1)>ul>li{
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            font-family: 'Muli', cursive;
+            cursor: pointer;
+        }
+        body>footer>div:nth-child(2){
+            width: 50%;
+            height: 400px;
+            position: absolute;
+            right: 0;
+        }
+
+
+        @media all and (max-width: 320px){
+            body>header{
+                position: relative;
+                width: 100%;
+                height: 40px;
+                z-index: -1;
+                background: black;
+            }
+            body>header>h1{
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-family: Muli;
+                font-style: normal;
+                font-weight: 800;
+                font-size: 25px;
+                margin: auto;
+                letter-spacing: -0.015em;
+                color: #FDD911;
+            }
+            body>header>nav{
+                display: none;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+<header>
+    <h1>Software Engineer</h1>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About me</li>
+            <li>What i do</li>
+            <li>Recent works</li>
+            <li>Contact me</li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    
+    <section>
+        <img src="assests/images/Interfaces2.jpg">
+
+        <div>
+            <div>
+                <p>CODER</p>
+                <p>Codes simplify the world</p>
+            </div>
+        </div>
+        <section>
+            <div></div>
+            <div></div>
+            <div>
+                <ul>
+                    <li>I’m Dinusha Liyanage,</li>
+                    <li>Software Engineer</li>
+                    <li>Web designer and Web Developer</li>
+                    <li>Im currently studying at ijse as a undergraduate.And  im
+                        21 years old now. And also studied mathematics for my
+                        a/l’s and im following a computer science part time
+                        degree. And also im interested in JAVA, PYTHON ,
+                        JavaScript , amd C++  .
+                    </li>
+                </ul>
+            </div>
+
+            <img src="assests/images/Edit6.png">
+        </section>
+
+
+    </section>
+    
+    <section>
+        <img src="assests/images/laptopback.jpg">
+        <div>
+            <h2>Recent</h2>
+            <h2>works</h2>
+        </div>
+        <section>
+            <div>
+                <img src="assests/images/projects.png">
+                <h1>Projects</h1>
+                <p>You can see all the
+                    projects i have done so
+                    far in javaScript , java ,
+                    python , html and css3
+                    languages .</p>
+            </div>
+            <div>
+                <img src="assests/images/assignments.png">
+                <h1>Assignments</h1>
+                <p>this one is  reserved for view
+                    my completed assignments
+                    which is given by IJSE during
+                    undergraduate .</p>
+            </div>
+            <div>
+                <img src="assests/images/games.png">
+                <h1>Games</h1>
+                <p>This is the most insteresting
+                    part . You can click here and
+                    watch and play the games
+                    i made .</p>
+            </div>
+            </div>
+        </section>
+
+
+    </section>
+
+    <section>
+        <img src="assests/images/laptopback.jpg">
+        <div>
+            <h2>What i</h2>
+            <h2>do</h2>
+        </div>
+        <section>
+            <div>
+                <img src="assests/images/hardware.jpg">
+            </div>
+            <div>
+                <img src="assests/images/harrypotter.webp">
+            </div>
+            <div>
+                <img src="assests/images/android.jpg">
+            </div>
+            <div></div>
+            <div></div>
+        </section>
+    </section>
+
+</main>
+
+<footer>
+    <div>
+        <h1>Contact Me</h1>
+        <ul>
+            <li>email : dinushamadhuranga111@gmail.com</li>
+            <li>write : no 206/1,Gemunu mw,Welmille,Bandaragama</li>
+            <li>mobile : 0711911333</li>
+            <li>tel : 0382293211</li>
+            <li>fax : 0382293211</li>
+        </ul>
+    </div>
+    <div>
+    </div>
+</footer>
+</body>
+</html>
